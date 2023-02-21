@@ -22,7 +22,28 @@ body {
     align-items: center; */
 }
 
-.about {
+#about {
+    min-height: calc(100vh - 70px );
+    min-width: 100vw;
+    display: none;
+}
+
+#headshot {
+    border-radius: 30% 30% 0% 0%;
+}
+
+#resume {
     min-height: calc(100vh - 70px);
     min-width: 100vw;
+}
+
+#projects {
+    min-height: calc(100vh - 70px );
+    min-width: 100vw;
+    display: none;
+}
+
+#footer {
+    border: 2px solid forestgreen;
+    background-color: whitesmoke;
 }
