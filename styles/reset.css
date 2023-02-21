@@ -25,6 +25,7 @@ body {
 #about {
     min-height: calc(100vh - 70px );
     min-width: 100vw;
+    padding-bottom: 42px;
     display: none;
 }
 
@@ -35,12 +36,29 @@ body {
 #resume {
     min-height: calc(100vh - 70px);
     min-width: 100vw;
+    padding-bottom: 42px;
+    display: none;
 }
 
 #projects {
     min-height: calc(100vh - 70px );
     min-width: 100vw;
     display: none;
+}
+
+.carousel-container {
+    border: 2px solid rosybrown;
+    overflow: scroll;
+}
+
+img.resume-pages {
+    border: 2px solid saddlebrown;
+    width: 90%;
+    display: none;
+}
+
+img.resume-pages:first-of-type {
+    display: block;
 }
 
 #footer {
