@@ -43,7 +43,7 @@ body {
 #projects {
     min-height: calc(100vh - 70px );
     min-width: 100vw;
-    display: none;
+    /* display: none; */
 }
 
 .carousel-container {
