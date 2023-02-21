@@ -1,0 +1,27 @@
+.navbar {
+    border: 2px solid pink;
+    background-color: whitesmoke;
+}
+
+.nav {
+    margin-right: 20px;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: black !important;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+button.navbar-toggler {
+    border: none;
+}
+
+.navbar-text {
+    margin-left: 20px;
+    font-size: 2rem;
+}
