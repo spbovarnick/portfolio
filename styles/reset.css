@@ -1,26 +1,42 @@
+:root {
+    --main-bg-grad: linear-gradient(to bottom right, #6393a6, #c2e5f2, #3D6D73);
+    --scd-bg-grad: linear-gradient(to bottom right, #212E40, #3D6D73, #5D8AA6);
+    --thd-bg-grad: linear-gradient(to bottom right, #5D8AA6, #3D6D73, )
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
 
 * {
     font-family: 'Quattrocento Sans', sans-serif;
 }
-/* 
-body {
-    display: flex;
-    background-color: black !important;
-    background-color: #6393a688;
-    justify-content: center;
-    height: 100vh;
-} */
+
 
 
 
 section.home-wrap {
-    /* border: 1px solid #212E40; */
-    background-color: #6393a6;
+    background-image: var(--main-bg-grad);
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
-    /* display: none; */
+    cursor: pointer;
+}
+
+#logo {
+    transition: transform 1s ease;
+    z-index: 100;
+}
+
+#logo:hover {
+    animation: spin 1.5s linear 0s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(-360deg)
+    }
 }
 
 #about {
@@ -62,9 +78,6 @@ img.resume-pages:first-of-type {
     display: none;
 }
 
-
-
 #footer {
-    border: 2px solid forestgreen;
-    background-color: rgba(245, 245, 245, 0.5);
+    background-image: linear-gradient(to right, rgba(245, 245, 245, 0), rgba(245, 245, 245, 0.5)) ;
 }

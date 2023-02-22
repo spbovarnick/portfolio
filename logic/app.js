@@ -68,6 +68,7 @@ navBarNav.addEventListener("click", (event) => {
         bar.style.display = "block";
         xOut.style.display = "none";
         landing.style.display = "flex";
+        landing.style.backgroundImage = "var(--main-bg-grad)"
     }
 
     disappearNav();
@@ -93,31 +94,17 @@ navBarNav.addEventListener("click", (event) => {
             projectsSection.style.display = "none"
         });
     }
-
-    // xOut.addEventListener("click", () => {
-    //     reappearNav()
-    //     aboutSection.style.display = "none";
-    // })
 })
 
-// // resume nav
-// resumeButton.addEventListener("click", () => {
-//     disappearNav();
-//     resumeSection.style.display = "block";
+// change background-img gradient on landing
 
-//     xOut.addEventListener("click", () => {
-//         reappearNav();
-//         resumeSection.style.display = "none";
-//     })
-// })
 
-// // projects nav
-// projectsButton.addEventListener("click", () => {
-//     disappearNav();
-//     projectsSection.style.display = "block";
+landing.addEventListener("click", () => {
+    // store color pallette
+    let bgColors = ["#212E40", "#5D8AA6", "#6393A6", "#C2E5F2", "#3D6D73"]
 
-//     xOut.addEventListener("click", () => {
-//         reappearNav();
-//         projectsSection.style.display = "none";
-//     })
-// })
+    let c1 = Math.floor(Math.random() * bgColors.length);
+    let c2 = Math.floor(Math.random() * bgColors.length);
+    let c3 = Math.floor(Math.random() * bgColors.length);
+    landing.style.backgroundImage = `linear-gradient(to bottom right,  ${bgColors[c1]}, ${bgColors[c2]}, ${bgColors[c3]}`;
+})

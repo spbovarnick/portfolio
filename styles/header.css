@@ -1,3 +1,7 @@
+:root {
+    --main-text: #212E40;
+}
+
 .navbar {
     background-color: whitesmoke;
 }
@@ -8,13 +12,20 @@
 
 .navbar-brand {
     font-size: 2rem;
+    color: var(--main-text) !important;
 }
 
 .nav-link{
-    color: black !important;
+    color: var(--main-text) !important;
     text-decoration: none;
     font-size: 1.5rem;
-    z-index: 1;
+    z-index: 100;
+    transition: font-size .2s linear, filter .2s linear !important;
+}
+
+.nav-link:hover {
+    font-size: 1.6rem;
+    filter: drop-shadow(5px 5px 4px rgba(80, 80, 80, 0.8));
 }
 
 button.navbar-toggler {
@@ -29,7 +40,14 @@ button.navbar-toggler {
 #x-out {
     display: none;
     position: fixed;
-    top: 25px;
-    right: 25px;
+    top: 10px;
+    right: 15px;
     z-index: 1;
+    font-size: 1.5rem;
+    transition: font-size .2s linear, filter .2s linear;
+}
+
+#x-out:hover {
+    font-size: 1.6rem;
+    filter: drop-shadow(5px 5px 4px rgba(80, 80, 80, 0.8));
 }
