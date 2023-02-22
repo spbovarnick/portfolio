@@ -3,23 +3,24 @@
 * {
     font-family: 'Quattrocento Sans', sans-serif;
 }
-
+/* 
 body {
-    /* display: flex; */
-    /* background-color: black !important; */
-    /* background-color: #6393a688; */
-    /* justify-content: center; */
+    display: flex;
+    background-color: black !important;
+    background-color: #6393a688;
+    justify-content: center;
     height: 100vh;
-}
+} */
 
-.home-wrap {
-    border: 1px solid #212E40;
+
+
+section.home-wrap {
+    /* border: 1px solid #212E40; */
     background-color: #6393a6;
     min-height: 100vh;
     min-width: 100vw;
-    /* display: flex;
-    justify-content: flex-start;
-    align-items: center; */
+    display: flex;
+    /* display: none; */
 }
 
 #about {
@@ -40,12 +41,6 @@ body {
     display: none;
 }
 
-#projects {
-    min-height: calc(100vh - 70px );
-    min-width: 100vw;
-    /* display: none; */
-}
-
 .carousel-container {
     border: 2px solid rosybrown;
     overflow: scroll;
@@ -61,7 +56,15 @@ img.resume-pages:first-of-type {
     display: block;
 }
 
+#projects {
+    min-height: calc(100vh - 70px );
+    min-width: 100vw;
+    display: none;
+}
+
+
+
 #footer {
     border: 2px solid forestgreen;
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.5);
 }
