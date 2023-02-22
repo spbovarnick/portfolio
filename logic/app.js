@@ -51,49 +51,73 @@ const resumeButton = document.getElementById("resume-button");
 const projectsButton = document.getElementById("projects-button");
 
 
-function disappearNav() {
-    bar.style.display = "none";
-    xOut.style.display = "block";
-    landing.style.display = "none";
-}
-
-function reappearNav() {
-    bar.style.display = "block";
-    xOut.style.display = "none";
-    landing.style.display = "flex";
-}
 
 
 
 // About page nav
-aboutButton.addEventListener("click", () => {
-    disappearNav();
-    aboutSection.style.display = "block";
+navBarNav.addEventListener("click", (event) => {
+    
+    
+    function disappearNav() {
+        bar.style.display = "none";
+        xOut.style.display = "block";
+        landing.style.display = "none";
+    }
+    
+    function reappearNav() {
+        bar.style.display = "block";
+        xOut.style.display = "none";
+        landing.style.display = "flex";
+    }
 
-    xOut.addEventListener("click", () => {
-        reappearNav()
-        aboutSection.style.display = "none";
-    })
+    disappearNav();
+
+    if (event.target === aboutButton) {
+        aboutSection.style.display = "block";
+        xOut.addEventListener("click", () => {
+            reappearNav()
+            aboutSection.style.display = "none"
+        });
+    }
+    if (event.target === resumeButton) {
+        resumeSection.style.display = "block";
+        xOut.addEventListener("click", () => {
+            reappearNav()
+            resumeSection.style.display = "none"
+        });
+    }
+    if (event.target === projectsButton) {
+        projectsSection.style.display = "block";
+        xOut.addEventListener("click", () => {
+            reappearNav()
+            projectsSection.style.display = "none"
+        });
+    }
+
+    // xOut.addEventListener("click", () => {
+    //     reappearNav()
+    //     aboutSection.style.display = "none";
+    // })
 })
 
-// resume nav
-resumeButton.addEventListener("click", () => {
-    disappearNav();
-    resumeSection.style.display = "block";
+// // resume nav
+// resumeButton.addEventListener("click", () => {
+//     disappearNav();
+//     resumeSection.style.display = "block";
 
-    xOut.addEventListener("click", () => {
-        reappearNav();
-        resumeSection.style.display = "none";
-    })
-})
+//     xOut.addEventListener("click", () => {
+//         reappearNav();
+//         resumeSection.style.display = "none";
+//     })
+// })
 
-// projects nav
-projectsButton.addEventListener("click", () => {
-    disappearNav();
-    projectsSection.style.display = "block";
+// // projects nav
+// projectsButton.addEventListener("click", () => {
+//     disappearNav();
+//     projectsSection.style.display = "block";
 
-    xOut.addEventListener("click", () => {
-        reappearNav();
-        projectsSection.style.display = "none";
-    })
-})
+//     xOut.addEventListener("click", () => {
+//         reappearNav();
+//         projectsSection.style.display = "none";
+//     })
+// })
