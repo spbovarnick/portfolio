@@ -1,7 +1,8 @@
 :root {
     --main-bg-grad: linear-gradient(to bottom right, #6393a6, #c2e5f2, #3D6D73);
     --scd-bg-grad: linear-gradient(to bottom right, #212E40, #3D6D73, #5D8AA6);
-    --thd-bg-grad: linear-gradient(to bottom right, #5D8AA6, #3D6D73, )
+    --main-text: #212E40;
+    --text-drop: #212e40c0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
@@ -9,9 +10,6 @@
 * {
     font-family: 'Quattrocento Sans', sans-serif;
 }
-
-
-
 
 section.home-wrap {
     background-image: var(--main-bg-grad);
@@ -57,15 +55,19 @@ section.home-wrap {
     display: none;
 }
 
+#res-link {
+    text-decoration: none;
+    color: var(--main-text);
+}
+
 .carousel-container {
-    border: 2px solid rosybrown;
     overflow: scroll;
 }
 
 img.resume-pages {
-    border: 2px solid saddlebrown;
     width: 90%;
     display: none;
+    filter: drop-shadow(10px 10px 4px rgba(128, 128, 128, 0.77)); 
 }
 
 img.resume-pages:first-of-type {

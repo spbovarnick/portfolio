@@ -57,7 +57,6 @@ const projectsButton = document.getElementById("projects-button");
 // About page nav
 navBarNav.addEventListener("click", (event) => {
     
-    
     function disappearNav() {
         bar.style.display = "none";
         xOut.style.display = "block";
@@ -70,9 +69,9 @@ navBarNav.addEventListener("click", (event) => {
         landing.style.display = "flex";
         landing.style.backgroundImage = "var(--main-bg-grad)"
     }
-
+    
     disappearNav();
-
+    
     if (event.target === aboutButton) {
         aboutSection.style.display = "block";
         xOut.addEventListener("click", () => {
@@ -94,7 +93,11 @@ navBarNav.addEventListener("click", (event) => {
             projectsSection.style.display = "none"
         });
     }
+    if (event.target !== aboutButton && event.target !== resumeButton && event.target !== projectsButton) {
+        reappearNav();
+    }
 })
+
 
 // change background-img gradient on landing
 
@@ -102,7 +105,7 @@ navBarNav.addEventListener("click", (event) => {
 landing.addEventListener("click", () => {
     // store color pallette
     let bgColors = ["#212E40", "#5D8AA6", "#6393A6", "#C2E5F2", "#3D6D73"]
-
+    
     let c1 = Math.floor(Math.random() * bgColors.length);
     let c2 = Math.floor(Math.random() * bgColors.length);
     let c3 = Math.floor(Math.random() * bgColors.length);
