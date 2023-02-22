@@ -73,7 +73,7 @@ navBarNav.addEventListener("click", (event) => {
     disappearNav();
     
     if (event.target === aboutButton) {
-        aboutSection.style.display = "block";
+        aboutSection.style.display = "flex";
         xOut.addEventListener("click", () => {
             reappearNav()
             aboutSection.style.display = "none"
