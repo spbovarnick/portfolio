@@ -124,4 +124,9 @@ landing.addEventListener("click", () => {
     
     // gradient color picker
     landing.style.backgroundImage = `linear-gradient(to bottom right,  ${bgColors[clr1]}, ${bgColors[clr2]}, ${bgColors[clr3]}`;
-})
+});
+
+// drag logo
+$( function() {
+    $( "#logo").draggable({ cursor: "move", cursorAt: { top: 150, left: 150 }, containment: ".home-wrap", scroll: false  });
+});
