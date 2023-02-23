@@ -100,7 +100,7 @@ img.resume-pages:first-of-type {
     height: 33px;
     width: 33px;
     filter: drop-shadow(5px 5px 4px var(--text-drop));
-
+    cursor: pointer;
 }
 
 #projects {

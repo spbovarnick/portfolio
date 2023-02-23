@@ -22,16 +22,23 @@ function cycle(nextToPrevious) {
     // set index of previous page to index of page that is currently visible
     previousPgIdx = currentPgIndx
     currentPgIndx = currentPgIndx + nextToPrevious
-    pages[previousPgIdx].style.display = 'none';
-
+    // hide previous page
+    pages[previousPgIdx].style.display = 'none'
+    
     // check if next page index exists in our pages array
     if (currentPgIndx >= pages.length) {
         currentPgIndx = 0;
+        console.log(`hi`)
     } else if (currentPgIndx < 0) {
-        currentPgIndx = pages.length - nextToPrevious;
+        currentPgIndx = pages.length - 1;
     }
-
+    console.log(currentPgIndx)
+    console.log(pages.length)
+    console.log(previousPgIdx)
+    
     pages[currentPgIndx].style.display = "block";
+    console.log(pages[currentPgIndx])
+
 }
 
 
@@ -57,12 +64,14 @@ const projectsButton = document.getElementById("projects-button");
 // About page nav
 navBarNav.addEventListener("click", (event) => {
     
+    // hide navbar & landing page, pull up the x out button
     function disappearNav() {
         bar.style.display = "none";
         xOut.style.display = "flex";
         landing.style.display = "none";
     }
     
+    // bring back nav elements and functionality & landing page
     function reappearNav() {
         bar.style.display = "block";
         xOut.style.display = "none";
@@ -72,6 +81,7 @@ navBarNav.addEventListener("click", (event) => {
     
     disappearNav();
     
+    // nav to about page
     if (event.target === aboutButton) {
         aboutSection.style.display = "flex";
         xOut.addEventListener("click", () => {
@@ -79,6 +89,7 @@ navBarNav.addEventListener("click", (event) => {
             aboutSection.style.display = "none"
         });
     }
+    // nav to resume page
     if (event.target === resumeButton) {
         resumeSection.style.display = "block";
         xOut.addEventListener("click", () => {
@@ -86,6 +97,7 @@ navBarNav.addEventListener("click", (event) => {
             resumeSection.style.display = "none"
         });
     }
+    // nav to projects page
     if (event.target === projectsButton) {
         projectsSection.style.display = "block";
         xOut.addEventListener("click", () => {
@@ -93,6 +105,7 @@ navBarNav.addEventListener("click", (event) => {
             projectsSection.style.display = "none"
         });
     }
+    // clean up blank space clickability
     if (event.target !== aboutButton && event.target !== resumeButton && event.target !== projectsButton) {
         reappearNav();
     }
@@ -100,14 +113,15 @@ navBarNav.addEventListener("click", (event) => {
 
 
 // change background-img gradient on landing
-
-
 landing.addEventListener("click", () => {
     // store color pallette
     let bgColors = ["#212E40", "#5D8AA6", "#6393A6", "#C2E5F2", "#3D6D73"]
     
-    let c1 = Math.floor(Math.random() * bgColors.length);
-    let c2 = Math.floor(Math.random() * bgColors.length);
-    let c3 = Math.floor(Math.random() * bgColors.length);
-    landing.style.backgroundImage = `linear-gradient(to bottom right,  ${bgColors[c1]}, ${bgColors[c2]}, ${bgColors[c3]}`;
+    // random index
+    let clr1 = Math.floor(Math.random() * bgColors.length);
+    let clr2 = Math.floor(Math.random() * bgColors.length);
+    let clr3 = Math.floor(Math.random() * bgColors.length);
+    
+    // gradient color picker
+    landing.style.backgroundImage = `linear-gradient(to bottom right,  ${bgColors[clr1]}, ${bgColors[clr2]}, ${bgColors[clr3]}`;
 })
