@@ -12,7 +12,7 @@
 
 * {
     font-family: 'Quattrocento Sans', sans-serif;
-    color: var(--main-text) !important;
+    /* color: var(--main-text) !important; */
 }
 
 body {
@@ -37,6 +37,10 @@ section.home-wrap {
 #logo:hover {
     animation: spin 1.5s linear 0s infinite;
     cursor: grab;
+}
+
+#logo:active {
+    cursor:  grabbing
 }
 
 @keyframes spin {
@@ -68,6 +72,10 @@ section.home-wrap {
     padding-bottom: 42px;
     display: none;
     animation: fade-in .6s linear both;
+}
+
+#res-link {
+    color: var(--main-text) !important;
 }
 
 #res-link {
@@ -111,12 +119,6 @@ img.resume-pages:first-of-type {
     animation: fade-in .6s linear both;
 }
 
-/* @media screen and (min-width: 1200px) {
-    #projects {
-        min-height: 100vh;
-    }
-} */
-
 .card {
     width: 18rem;
     margin: auto;
@@ -134,6 +136,11 @@ img.resume-pages:first-of-type {
 
 #footer {
     background-image: linear-gradient(to right, rgba(245, 245, 245, 0), rgba(245, 245, 245, 0.5)) ;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--main-text) !important;
+    --bs-tooltip-color: white !important;
 }
 
 @keyframes fade-in {
