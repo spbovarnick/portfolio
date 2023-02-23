@@ -59,7 +59,7 @@ navBarNav.addEventListener("click", (event) => {
     
     function disappearNav() {
         bar.style.display = "none";
-        xOut.style.display = "block";
+        xOut.style.display = "flex";
         landing.style.display = "none";
     }
     
