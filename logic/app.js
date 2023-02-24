@@ -126,12 +126,18 @@ landing.addEventListener("click", () => {
     landing.style.backgroundImage = `linear-gradient(to bottom right,  ${bgColors[clr1]}, ${bgColors[clr2]}, ${bgColors[clr3]}`;
 });
 
-// drag logo, cursor centered, contained within viewport
-$( function() {
-    $( "#logo").draggable({ cursor: "move", cursorAt: { top: 150, left: 150 }, containment: ".home-wrap", scroll: false  });
-});
 
 // footer tooltips
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+
+// drag logo, cursor centered, contained within viewport
+$(document).ready(function() {
+    $( function() {
+        $( "#logo").draggable({ 
+            cursor: "move", 
+            cursorAt: { top: 150, left: 150 }, containment: ".home-wrap", 
+            scroll: false  });
+    });
+});

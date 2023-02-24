@@ -1,6 +1,6 @@
 # portfolio
 
-![Landing page screengrab](/portfolio/assets/site-screengrab.png "Landing Page")
+![Landing page screengrab](/portfolio/assets/site-screengrab.png)
 
 ## Tecnologies
 
