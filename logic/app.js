@@ -45,71 +45,104 @@ function cycle(nextToPrevious) {
 /*--------------NAVIGATION LOGIC----------------*/
 // page/section variables
 const aboutSection = document.getElementById("about");
-const resumeSection = document.getElementById("resume");
-const projectsSection = document.getElementById("projects");
+// const resumeSection = document.getElementById("resume");
+// const projectsSection = document.getElementById("projects");
 const landing = document.querySelector(".home-wrap")
 const xOut = document.getElementById("x-out");
 const bar = document.querySelector("nav");
-const navBarNav = document.querySelector("#navbarNav")
+// const navBarNav = document.querySelector("#navbarNav")
 
 // nav button variables
-const aboutButton = document.getElementById("about-button");
-const resumeButton = document.getElementById("resume-button");
-const projectsButton = document.getElementById("projects-button");
+// const aboutButton = document.getElementById("about-button");
+// const resumeButton = document.getElementById("resume-button");
+// const projectsButton = document.getElementById("projects-button");
 
+const sitePages = document.getElementById("section")
+const pageLinks = document.querySelectorAll(".nav-links")
 
+function disappearNav() {
+    bar.style.display = "none";
+    xOut.style.display = "flex";
+    landing.style.display = "none";
+}
 
+function disappearNav() {
+    bar.style.display = "none";
+    xOut.style.display = "flex";
+    landing.style.display = "none";
+}
+
+for (let i = 0; i < sitePages.length; i++) {
+    pageLinks[i].addEventListener("click", () => {
+        disappearNav()
+        for (let j = 0; j < sitePages.length; j++){
+            pages[j].style.display = "none"
+        }
+        if (sitePages[i] === aboutSection) {
+            sitePages[i].style.display = "flex"
+            xOut.addEventListener("click", () => {
+                reappearNav()
+            });
+        } else {
+        sitePages[i].style.display = "block"
+        xOut.addEventListener("click", () => {
+            reappearNav()
+        });
+        }
+    })
+}
 
 
 // About page nav
-navBarNav.addEventListener("click", (event) => {
+// navBarNav.addEventListener("click", (event) => {
     
-    // hide navbar & landing page, pull up the x out button
-    function disappearNav() {
-        bar.style.display = "none";
-        xOut.style.display = "flex";
-        landing.style.display = "none";
-    }
+//     // hide navbar & landing page, pull up the x out button
+//     function disappearNav() {
+//         bar.style.display = "none";
+//         xOut.style.display = "flex";
+//         landing.style.display = "none";
+//     }
     
-    // bring back nav elements and functionality & landing page
-    function reappearNav() {
-        bar.style.display = "block";
-        xOut.style.display = "none";
-        landing.style.display = "flex";
-        landing.style.backgroundImage = "var(--main-bg-grad)"
-    }
+//     // bring back nav elements and functionality & landing page
+//     function disappearNav() {
+//         bar.style.display = "none";
+//         xOut.style.display = "flex";
+//         landing.style.display = "none";
+//     }
     
-    disappearNav();
+//     disappearNav();
     
-    // nav to about page
-    if (event.target === aboutButton) {
-        aboutSection.style.display = "flex";
-        xOut.addEventListener("click", () => {
-            reappearNav()
-            aboutSection.style.display = "none"
-        });
-    }
-    // nav to resume page
-    if (event.target === resumeButton) {
-        resumeSection.style.display = "block";
-        xOut.addEventListener("click", () => {
-            reappearNav()
-            resumeSection.style.display = "none"
-        });
-    }
-    // nav to projects page
-    if (event.target === projectsButton) {
-        projectsSection.style.display = "block";
-        xOut.addEventListener("click", () => {
-            reappearNav()
-            projectsSection.style.display = "none"
-        });
-    }
-    // clean up blank space clickability
-    if (event.target !== aboutButton && event.target !== resumeButton && event.target !== projectsButton) {
-        reappearNav();
-    }
-})
+    
+
+//     // nav to about page
+//     if (event.target === aboutButton) {
+//         aboutSection.style.display = "flex";
+//         xOut.addEventListener("click", () => {
+//             reappearNav()
+//             aboutSection.style.display = "none"
+//         });
+//     }
+//     // nav to resume page
+//     if (event.target === resumeButton) {
+//         resumeSection.style.display = "block";
+//         xOut.addEventListener("click", () => {
+//             reappearNav()
+//             resumeSection.style.display = "none"
+//         });
+//     }
+//     // nav to projects page
+//     if (event.target === projectsButton) {
+//         projectsSection.style.display = "block";
+//         xOut.addEventListener("click", () => {
+//             reappearNav()
+//             projectsSection.style.display = "none"
+//         });
+//     }
+//     // clean up blank space clickability
+//     if (event.target !== aboutButton && event.target !== resumeButton && event.target !== projectsButton) {
+//         reappearNav();
+//     }
+// })
 
 
 // change background-img gradient on landing
