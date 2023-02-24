@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 
 ![Landing page screengrab](/assets/site-screengrab.png)
 
