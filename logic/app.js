@@ -39,11 +39,13 @@ for (let i = 0; i < sitePages.length; i++) {
             // assign x event listener
             xOut.addEventListener("click", () => {
                 // onclick, hide x, bring back navbar
+                sitePages[i].style.display = "none"
                 reappearNav()
             });
         } else {
         sitePages[i].style.display = "block"
         xOut.addEventListener("click", () => {
+            sitePages[i].style.display = "none"
             reappearNav()
         });
         }
