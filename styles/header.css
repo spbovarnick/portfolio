@@ -4,7 +4,8 @@
 }
 
 .navbar {
-    background-color: rgba(245, 245, 245, 0.6);
+    /* background-color: rgba(245, 245, 245, 0.291); */
+    background-image: linear-gradient(to left, rgba(245, 245, 245, 0.447), rgba(245, 245, 245, 0.5)) ;
 }
 
 .nav {
