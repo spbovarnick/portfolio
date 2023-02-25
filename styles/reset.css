@@ -138,6 +138,10 @@ img.resume-pages:first-of-type {
     background-image: linear-gradient(to right, rgba(245, 245, 245, 0), rgba(245, 245, 245, 0.5)) ;
 }
 
+#footer div {
+    margin-right: 3rem;
+}
+
 .custom-tooltip {
     --bs-tooltip-bg: var(--main-text) !important;
     --bs-tooltip-color: white !important;
